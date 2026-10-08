@@ -10,6 +10,8 @@ def calculate(operation, a, b):
             return a / b
         except ZeroDivisionError:
             return "Error: Divide by Zero Error"
+    elif operation == 'exponent':
+        return a **b
     else:
         return "Error: Unsupported operation"
 
@@ -20,3 +22,4 @@ if __name__ == "__main__":
     print(calculate('multiply', 5, 3))   # Output: 15
     print(calculate('divide', 5, 3))     # Output: 1.666...
     print(calculate('divide', 5, 0))     # Error
+    print(calculate('exponent',5,3))     # Output: 125
