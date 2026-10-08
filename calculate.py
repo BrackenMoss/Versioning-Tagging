@@ -1,22 +1,33 @@
 def calculate(operation, a, b):
+    output = f'{operation} of {a} and {b} ='
     try: 
         a = int(a)
         b = int(b)
     except:
         return "Error: Not a Number"
     if operation == 'add':
-        return a + b 
+        value = a + b 
+        output += f' {value}'
+        return output
     elif operation == 'subtract':
-        return a - b 
+        value = a - b 
+        output += f' {value}'
+        return output
     elif operation == 'multiply':
-        return a * b 
+        value = a * b 
+        output += f' {value}'
+        return output
     elif operation == 'divide':
         try:
-            return a / b 
+            value = a / b 
+            output += f' {value}'
+            return output
         except ZeroDivisionError:
             return "Error: Divide by Zero Error"
     elif operation == 'exponent':
-        return a **b 
+        value = a **b 
+        output += f' {value}'
+        return output
     else:
         return "Error: Unsupported operation"
     
