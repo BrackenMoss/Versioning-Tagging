@@ -1,5 +1,9 @@
 def calculate(operation, a, b):
-
+    try: 
+        a = int(a)
+        b = int(b)
+    except:
+        return "Error: Not a Number"
     if operation == 'add':
         return a + b 
     elif operation == 'subtract':
@@ -15,6 +19,7 @@ def calculate(operation, a, b):
         return a **b 
     else:
         return "Error: Unsupported operation"
+    
 
 # Example usage
 if __name__ == "__main__":
@@ -24,3 +29,4 @@ if __name__ == "__main__":
     print(calculate('divide', 5, 3))     # Output: 1.666...
     print(calculate('divide', 5, 0))     # Error: Divide by Zero Error
     print(calculate('exponent',2,2))     # Output: 125
+    print(calculate('add','five','three'))
